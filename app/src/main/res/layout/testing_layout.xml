@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/flower_image"
+        android:src="@drawable/flower"
+        android:scaleType="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_name"
+        android:textSize="@dimen/header_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flower_image"/>
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        android:text="@string/txt_header"
+        android:textSize="@dimen/header_size"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"/>
+
+    <ImageView
+        android:id="@+id/ic_star"
+        android:layout_width="@dimen/dimen_24dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@id/txt_header"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        android:layout_marginTop="@dimen/dimen_24dp" />
+
+    <TextView
+    android:id="@+id/txt_choice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txtChoice"
+    app:layout_constraintLeft_toRightOf="@id/ic_star"
+    app:layout_constraintTop_toBottomOf="@id/txt_header"
+    android:layout_marginTop="@dimen/dimen_24dp"
+    android:textSize="@dimen/choice_text_size"
+    android:textColor="@color/themeColor"/>
+
+    <TextView
+        android:id="@+id/txtdescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtdescription"
+        android:textSize="@dimen/description_size"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:textColor="@color/text_color"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/ic_star"/>
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$99.0"
+        android:textStyle="bold"
+        android:textSize="@dimen/header_size"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_price"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/rounded_button"
+        android:text="@string/btn_text"
+        android:textColor="@android:color/white"
+        android:paddingLeft="@dimen/dimen_12dp"
+        android:paddingRight="@dimen/dimen_12dp"
+        android:layout_marginRight="@dimen/dimen_12dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
